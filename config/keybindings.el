@@ -1,9 +1,4 @@
 ;; Global
-(global-set-key (kbd "<up>") 'windmove-up)
-(global-set-key (kbd "<down>") 'windmove-down)
-(global-set-key (kbd "<left>") 'windmove-left)
-(global-set-key (kbd "<right>") 'windmove-right)
-
 (global-set-key (kbd "C-M-\\") 'indent-region)
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
@@ -28,3 +23,6 @@
 ;; Expand Region
 (global-set-key (kbd "C-@") 'er/expand-region)
 (global-set-key (kbd "C--") 'er/contract-region)
+
+;; Jump to function definition
+(global-set-key (kbd "C-h C-f") 'find-function)

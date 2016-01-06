@@ -1,11 +1,21 @@
-(require 'cask "/usr/local/Cellar/cask/0.7.1/cask.el")
+(require 'cask "~/.cask/cask.el")
 (cask-initialize)
 (require 'pallet)
 (require 'package)
+
+(setq url-proxy-services
+   '(("http" . "wwwproxy.sandia.gov:80")
+    ("https" . "wwwproxy.gov:80")))
+
+
+
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")
                          ("tromey" . "http://tromey.com/elpa/")))
+
+
+
 (package-initialize)
 
 ;; Config
@@ -39,7 +49,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("edf2b8d3da4898e39646bc45c79106d8884cd7028cd1def67853309d7b2da0b3" "013e87003e1e965d8ad78ee5b8927e743f940c7679959149bbee9a15bd286689" default)))
+ '(custom-enabled-themes (quote (fogus)))
+ '(custom-safe-themes (quote ("3d5ef3d7ed58c9ad321f05360ad8a6b24585b9c49abcee67bdcbb0fe583a6950" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" "edf2b8d3da4898e39646bc45c79106d8884cd7028cd1def67853309d7b2da0b3" "013e87003e1e965d8ad78ee5b8927e743f940c7679959149bbee9a15bd286689" default)))
+ '(ecb-options-version "2.40")
  '(js2-basic-offset 2)
  '(js2-bounce-indent-p t))
 (custom-set-faces
@@ -47,4 +59,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(mode-line ((t (:foreground "#f2f1f0" :background "#98ce26" :box nil))))
+ '(mode-line-buffer-id ((t (:foreground "#383838" :background "#98ce26" :box nil))))
+ '(mode-line-highlight ((t (:background "#98ce26"))))
+ '(mode-line-inactive ((t (:foreground "#f2f1f0" :background "#98ce26" :box nil))))
+ '(powerline-active1 ((t (:foreground "#f2f1f0" :background "#383838" :box nil))))
+ '(powerline-active2 ((t (:foreground "#f2f1f0" :background "#625f61" :box nil))))
+ '(powerline-inactive1 ((t (:background "#e9e8e7" :foreground "#525150"))))
+ '(powerline-inactive2 ((t (:background "#d4d3d2" :foreground "#434241")))))
+(put 'erase-buffer 'disabled nil)
