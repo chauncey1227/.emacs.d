@@ -3,12 +3,6 @@
 (require 'pallet)
 (require 'package)
 
-(setq url-proxy-services
-   '(("http" . "wwwproxy.sandia.gov:80")
-    ("https" . "wwwproxy.gov:80")))
-
-
-
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")
@@ -40,6 +34,7 @@
 (load "15dash.el")
 (load "16expand-region.el")
 (load "17highlight-indentation.el")
+(load "18multiple-cursors.el")
 
 ;; Load custom keybindings at end to ensure mapped package functions are defined
 (load "keybindings.el")
@@ -50,7 +45,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (fogus)))
- '(custom-safe-themes (quote ("3d5ef3d7ed58c9ad321f05360ad8a6b24585b9c49abcee67bdcbb0fe583a6950" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" "edf2b8d3da4898e39646bc45c79106d8884cd7028cd1def67853309d7b2da0b3" "013e87003e1e965d8ad78ee5b8927e743f940c7679959149bbee9a15bd286689" default)))
+ '(custom-safe-themes
+   (quote
+    ("242e967213379be536e1d3953ad39bc1b36c7829db06193ca121d5f9b52e73ba" "3d5ef3d7ed58c9ad321f05360ad8a6b24585b9c49abcee67bdcbb0fe583a6950" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" "edf2b8d3da4898e39646bc45c79106d8884cd7028cd1def67853309d7b2da0b3" "013e87003e1e965d8ad78ee5b8927e743f940c7679959149bbee9a15bd286689" default)))
  '(ecb-options-version "2.40")
  '(js2-basic-offset 2)
  '(js2-bounce-indent-p t))
